@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2023 at 01:41 AM
+-- Generation Time: Apr 28, 2023 at 02:20 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -39,7 +39,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `password`, `name`) VALUES
-(0, 'jason25', 'f558e027d716c146170a79301aebbe00', 'Jason Ciayadi');
+(0, 'jason25', 'f558e027d716c146170a79301aebbe00', 'Jason Ciayadi'),
+(0, 'puji_kalangi', 'f7f94eb7431b65cbd3efd916e9a6287a', 'Puji');
 
 --
 -- Indexes for dumped tables
@@ -49,7 +50,7 @@ INSERT INTO `users` (`id`, `user_name`, `password`, `name`) VALUES
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`user_name`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
