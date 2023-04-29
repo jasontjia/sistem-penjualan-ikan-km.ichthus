@@ -30,6 +30,7 @@
         <a href="home.php"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
         <a href="Transaksi_Penjualan.php"><i class="fa-solid fa-cash-register"></i><span>Transaksi Penjualan</span></a>
         <a href="Lihat_Transaksi.php"><i class="fa-solid fa-eye"></i><span>View Transaksi</span></a>
+        <a href="presentase.php"><i class="fa-solid fa-eye"></i><span>Presentase</span></a>
         <a href="change-password.php"><i class="fas fa-key"></i><span>Ganti Password</span></a>
         <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
     </div>
@@ -44,7 +45,7 @@
             <label for="cari">Search</label>
             <form method="get" action="">
                 <input type="text" name="cari">
-            </form>    
+            </form>
             </br>
     <table border="1">
     <tr>
@@ -58,7 +59,7 @@
     </center>
 
     <?php
-    include "connect.php"; 
+    include "connect.php";
 
     $no=1;
     $ambildata = mysqli_query($koneksi,"select * from kontan");

@@ -31,6 +31,7 @@
         <a href="home.php"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
         <a href="Transaksi_Penjualan.php"><i class="fa-solid fa-cash-register"></i><span>Transaksi Penjualan</span></a>
         <a href="Lihat_Transaksi.php"><i class="fa-solid fa-eye"></i><span>View Transaksi</span></a>
+        <a href="chart.php"><i class="fa-solid fa-eye"></i><span>Presentase</span></a>
         <a href="change-password.php"><i class="fas fa-key"></i><span>Ganti Password</span></a>
         <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
     </div>
@@ -89,7 +90,7 @@
     </tr>
     <tr>
         <th> Action </th>
-        <th><input type="submit" name="proses" value="Simpan"></th>  
+        <th><input type="submit" name="proses" value="Simpan"></th>
     </tr>
 </table>
 <p align="center" style="font-weight:bold;font-size:14pt"></p>
@@ -140,13 +141,13 @@
     </p>
     <p align="center">
     </p>
-    
+
     <?php
     include "connect.php"; //Hapus Data Inputan
 
     if(isset($_GET['Customer'])){
     mysqli_query($koneksi,"delete  from kontan where Customer='$_GET[Customer]'");
-    
+
     echo "Data berhasil dihapus";
     echo "<meta http-equiv=refresh content=2;URL='Transaksi_Penjualan.php'>";
 
@@ -170,7 +171,7 @@
 include "connect.php";
 
 if(isset($_POST['proses'])){
-mysqli_query($koneksi, "insert into kontan set  
+mysqli_query($koneksi, "insert into kontan set
 Customer = '$_POST[Customer]',
 Jenis_Pembayaran = '$_POST[Jenis_Pembayaran]',
 Kode_Transaksi = '$_POST[Kode_Transaksi]',
@@ -190,15 +191,15 @@ echo "<meta http-equiv=refresh content=2;URL='Transaksi_Penjualan.php'>";
 ?>
 
 <script type="text/javascript"> //Logika Perhitungan berat ikan dan Total Harga yg dibayar
- $("#DOS").keyup(function(){   
+ $("#DOS").keyup(function(){
    var DOS = parseFloat($("#DOS").val());
    var Berat_Ikan = DOS*10;
    $("#Berat_Ikan").attr("Value",Berat_Ikan);
  });
 </script>
 
-<script type="text/javascript"> 
- $("#Harga").keyup(function(){   
+<script type="text/javascript">
+ $("#Harga").keyup(function(){
    var DOS = parseFloat($("#DOS").val());
    var Harga = parseFloat($("#Harga").val());
    var Total = DOS*Harga;
